@@ -15,12 +15,23 @@ header {
     display: flex;
     justify-content: space-around;
     border: 1px solid #e5e5e5;
+    width: 100%;
+    align-items: center;
 }
 
-nav {
-    
+button {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    padding: 10px 20px ;
+    margin-right: 0px;
+    cursor: pointer;
 }
 
+button:hover {
+    background-color: #12745e;  
+    color: #fff; 
+}
 
 a {
     color: #282828;
@@ -50,6 +61,7 @@ h1 {
     align-items: center;
     flex-direction: column;
 }
+
 .cpContainer {
     display: flex;
     justify-content: center;
