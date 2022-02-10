@@ -1,28 +1,35 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Heebo, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: #333;
-    background-color: #fff;
+    color: #282828;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
 }
 
-nav {
-    background-color: #000;
-    padding: 12px;
+header {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    border: 1px solid #e5e5e5;
 }
 
+nav {
+    
+}
+
+
 a {
-    color: #fff;
+    color: #282828;
     text-decoration: none;
     margin: 0px 8px;
 }
 
 a:hover {
-    color: lightblue;
+    color: #12745e;
 }
 
 .login-with-google-btn {
@@ -30,5 +37,51 @@ a:hover {
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
     border-radius: 10px;
     font-weight: 600;
-    font-color: rgb(94, 94, 94);    
+    font-color: rgb(94, 94, 94);
+
 }
+
+h1 {
+    font-size: 20px;
+}
+.cpPage { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cpContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0px;
+    width: 400px;
+    font-family: Heebo, sans-serif;
+}
+
+input:focus, textarea:focus {
+    outline-color: #12745e;
+}
+
+textarea {
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0px;
+    width: 400px;
+    height: 200px;
+    font-family: Heebo, sans-serif;
+}
+
