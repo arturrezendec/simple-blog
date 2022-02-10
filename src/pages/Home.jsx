@@ -16,12 +16,22 @@ function Home() {
     });
 
     return (
-    <div className='homePage'> 
-    {''}
-    {postLists.map((post) => { 
-    return <div className='post'> {post.title}</div>;
-    })}
-    </div>
+        <div className='homePage'>
+            {''}
+            {postLists.map((post) => {
+                return <div className='post'>
+                    <div className='postHeader'>
+                        {''}
+                        <div className='postTitle'>
+                            <h1>{post.title}</h1>
+                        </div>
+                        <div className='postText'>
+                            <p>{post.postText}</p>
+                        </div>
+                    </div>
+                </div>;
+            })}
+        </div>
     );
 }
 
