@@ -10,7 +10,7 @@ import logo from './assets/logo.svg';
 
 function App() {
 
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth") === "true");
 
   const signUserOut = () => {
     signOut(auth).then(() => {

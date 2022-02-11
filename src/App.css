@@ -22,15 +22,18 @@ header {
 button {
     background-color: #fff;
     border: 1px solid #e5e5e5;
-    border-radius: 3px;
+    border-radius: 8px;
     padding: 10px 20px ;
     margin-right: 0px;
     cursor: pointer;
+    font-family: Heebo, sans-serif;
+    font-size: 16px;
+    color: #282828;
 }
 
 button:hover {
-    background-color: #12745e;  
-    color: #fff; 
+    background-color: #002cbe;
+    color: #fff;  
 }
 
 a {
@@ -40,13 +43,13 @@ a {
 }
 
 a:hover {
-    color: #12745e;
+    color: #002cbe;
 }
 
 .login-with-google-btn {
     background: #ffffff;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
-    border-radius: 10px;
+    border-radius: 8px;
     font-weight: 600;
     font-color: rgb(94, 94, 94);
 
@@ -54,6 +57,14 @@ a:hover {
 
 h1 {
     font-size: 20px;
+}
+
+.loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 .cpPage { 
     display: flex;
@@ -76,7 +87,7 @@ h1 {
 
 input {
     border: 1px solid #e5e5e5;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 10px;
     margin: 10px 0px;
     width: 400px;
@@ -84,12 +95,12 @@ input {
 }
 
 input:focus, textarea:focus {
-    outline-color: #12745e;
+    outline-color: #002cbe;
 }
 
 textarea {
     border: 1px solid #e5e5e5;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 10px;
     margin: 10px 0px;
     width: 400px;
@@ -97,3 +108,41 @@ textarea {
     font-family: Heebo, sans-serif;
 }
 
+.homePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.post {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    width: 400px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 20px 40px;
+    margin: 20px 20px;
+}
+
+.postHeader {
+    
+    flex-direction: column;
+    align-items: center;
+    width: 100vh;
+   
+}
+
+.postTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.delete-post-btn {
+    margin-top: 12px;
+    padding: 6px;
+    font-size: 12px;
+
+}
