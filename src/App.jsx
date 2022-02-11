@@ -6,10 +6,11 @@ import Login from "./pages/Login"
 import { useState } from 'react'
 import { signOut } from 'firebase/auth'
 import { auth } from './firebase-config'
+import logo from './assets/logo.svg';
 
 function App() {
 
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth") === "true");
 
   const signUserOut = () => {
     signOut(auth).then(() => {
@@ -21,7 +22,9 @@ function App() {
 
   return (
     <Router>
-      <nav>
+      <header> 
+      <Link to="/"><img src={logo} href='/' alt='logo' /></Link>
+        <nav>
         <Link to="/"> Home </Link>
 
         {!isAuth ? (
@@ -29,11 +32,11 @@ function App() {
         ) : (
           <>
             <Link to="/createpost"> Create Post </Link>
-            <button onClick={signUserOut}>Log out</button>}
+            <button onClick={signUserOut}>Log out</button>
           </>
         )}
       </nav>
-
+      </header>
       <Routes>
         <Route path="/" element={<Home isAuth={isAuth} />} />
         <Route path="/createpost" element={<CreatePost isAuth={isAuth} />} />

@@ -21,7 +21,7 @@ function CreatePost({ isAuth }) {
         if (!isAuth) {
             navigate('/login');
         }
-    }, []);
+    }, []);     
 
     return (
         <div className='cpPage'>
@@ -37,7 +37,7 @@ function CreatePost({ isAuth }) {
                     <textarea placeholder='Type your text here'
                         onChange={(event) => { setPostText(event.target.value); }} />
                 </div>
-                <button onClick={createPost}>Create Post</button>
+                <button onClick={createPost}>Submit</button>
             </div>
         </div>
     )

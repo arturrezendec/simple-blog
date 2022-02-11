@@ -4,7 +4,7 @@ import { db } from '../firebase-config'
 import { auth } from '../firebase-config'
 
 
-function Home({isAuth}) {
+function Home({ isAuth }) {
     const [postLists, setPostList] = useState([]);
     const postsCollectionRef = collection(db, 'posts');
 
@@ -13,6 +13,7 @@ function Home({isAuth}) {
         await deleteDoc(postDoc)
     };
 
+
     useEffect(() => {
         const getPosts = async () => {
             const data = await getDocs(postsCollectionRef);
@@ -20,28 +21,29 @@ function Home({isAuth}) {
             setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
         }
         getPosts();
-    },[deletePost]);
-        
-    
+    }, []);
+
+
 
     return (
         <div className='homePage'>
-            {postLists.map((post) => {
+            {postLists.map((post) => {   
                 return (
-                <div className='post'>
-                    <div className='postHeader'>
-                        <div className='postTitle'>
-                            <h1>{post.title}</h1>
-                            {isAuth && post.author.id === auth.currentUser.uid && 
-                            ( <button className='delete-post-btn' 
-                            onClick={() => deletePost(post.id)}>Delete</button>
-                            )}
-                        </div>
-                        <div className='postText'>
-                            <p>{post.postText}</p>
+                    <div className='post'>
+                        <div className='postHeader'>
+                            <div className='postTitle'>
+                                <h1>{post.title}</h1>
+                                {isAuth && post.author.id === auth.currentUser.uid &&
+                                    (<button className='delete-post-btn'
+                                        onClick={() => deletePost(post.id)}>Delete</button>
+                                    )}
+                            </div>
+                            <div className='postText'>
+                                <p>{post.postText}</p>
+                                <h4>{post.author.name}</h4>
+                            </div>
                         </div>
                     </div>
-                </div>
                 );
             })}
         </div>
